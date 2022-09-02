@@ -4,11 +4,11 @@ const Users = require('./models/userModel')
 const Courses = require('./models/CourseModel')
 const samplecourses = require('./Data/Courses')
 dotenv.config()
-const CONNECTION_URL = "mongodb://localhost:27017/techaxis" || process.env.MONGODB_URL;
+const CONNECTION_URL = process.env.MONGODB_URL;
 
-const connectDB = async () => {
+const connectDB = () => {
     try {
-        const conn = await mongoose.connect(CONNECTION_URL, {
+        const conn = mongoose.connect(CONNECTION_URL, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
             useCreateIndex: true

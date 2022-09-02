@@ -1,7 +1,7 @@
-const path = require("path");
 require("dotenv").config({
-  silent: process.env.NODE_ENV === "production"
+  silent: process.env.NODE_ENV === "production",
 });
+const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -11,9 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-app.use(fileUpoad({
-  useTempFiles: true
-}));
+app.use(
+  fileUpoad({
+    useTempFiles: true,
+  })
+);
 
 //Routes
 app.use("/user", require("./routes/userRouter"));
@@ -46,7 +48,7 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT || 4000;
 
-const CONNECTION_URL = "mongodb://localhost:27017/techaxis" || process.env.MONGODB_URL;
+const CONNECTION_URL = process.env.MONGODB_URL;
 
 mongoose
   .connect(CONNECTION_URL, {
