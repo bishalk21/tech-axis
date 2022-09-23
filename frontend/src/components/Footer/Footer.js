@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import aa from "../images/PP.png";
+import aa from "../../assets/PP.png";
 
 const Footer = () => {
   let d = new Date();
@@ -68,14 +68,7 @@ const Footer = () => {
       <div className="logo_copyright">
         <img alt="TECHAXIS" src={aa} className="footer_logo" />
         <div className="copyright">
-          <p>
-            &copy; {new Date().getFullYear()}{" "}
-            <span>
-              <a href="" target="_blank" rel="noopener noreferrer">
-                Techaxis
-              </a>
-            </span>
-          </p>
+          <p>&copy; {n} Techaxis. All rights reserved.</p>
         </div>
       </div>
     </div>

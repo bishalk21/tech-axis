@@ -1,7 +1,5 @@
-require("dotenv").config({
-  silent: process.env.NODE_ENV === "production",
-});
 const path = require("path");
+require("dotenv").config({ silent: process.env.NODE_ENV === "production" });
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -11,11 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-app.use(
-  fileUpoad({
-    useTempFiles: true,
-  })
-);
+app.use(fileUpoad({ useTempFiles: true }));
 
 //Routes
 app.use("/user", require("./routes/userRouter"));

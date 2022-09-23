@@ -8,7 +8,7 @@ import {
   AiOutlineClose,
   RiArrowDropDownLine,
 } from "react-icons/all";
-import aa from "../images/PP.png";
+import aa from "../../assets/PP.png";
 import { Link } from "react-router-dom";
 import useWindowDimensions from "../../useWindowDimensions";
 import axios from "axios";
@@ -140,7 +140,7 @@ const Navbar = ({ match, history }) => {
         </div>
         <div className="logo">
           <Link to="/">
-            <img src={aa} alt="TECHAXIS" className="logo_header" />
+            <img src={aa} alt="Logo" className="logo_header" />
           </Link>
         </div>
         {showicons && (
@@ -235,7 +235,7 @@ const Navbar = ({ match, history }) => {
       </nav>
       {showicons && (
         <Drawer
-          title="EDUSPACE"
+          title="TECHAXIS"
           placement={"left"}
           closable={true}
           onClose={onClose}

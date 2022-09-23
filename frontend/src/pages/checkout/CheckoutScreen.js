@@ -14,7 +14,7 @@ import {
 const CheckoutScreen = ({ history }) => {
   const dispatch = useDispatch();
   const cartReducer = useSelector((state) => state.cartReducer);
-  const { cartItems, countryCustomer } = cartReducer; // + NameOnCard
+  const { cartItems, countryCustomer, NameOnCard } = cartReducer;
   const [country, setCountry] = useState(countryCustomer.country);
   const [value, setValue] = useState(1);
   const { option } = Select;

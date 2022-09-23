@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import { Empty } from "antd";
 import { Helmet } from "react-helmet";
 import axios from "axios";
-import me from "../../components/images/me.jpeg";
 
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -134,7 +133,7 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>TechAxis</title>
+        <title>Dashboard | TechAxis e-Learning</title>
       </Helmet>
       <div>
         <div className="Banner_Card">
@@ -496,8 +495,10 @@ const Home = () => {
       </section>
       <section className="Become_Teacher">
         <div className="background">
-          <img src={me} alt="Teacher" />
-
+          <img
+            src="https://images.unsplash.com/photo-1556302132-40bb13638500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fHRlYWNoZXIlMjBwcm9ncmFtbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            alt="Teacher"
+          />
           <div className="paragraph">
             <h2>Become a Teacher with us</h2>
             <p>Do you have the skills and you want to share it with profit?</p>

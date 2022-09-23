@@ -23,7 +23,7 @@ const PlaceOrder = ({ history }) => {
     /.(?=.{1})/g,
     "x"
   );
-  // const { cartItems } = cartReducer;
+  const { cartItems } = cartReducer;
 
   cartReducer.itemsPrice = addDecimals(
     cartReducer.cartItems.reduce((acc, item) => acc + item.price, 0)
