@@ -3,13 +3,13 @@ const { google } = require("googleapis");
 const { OAuth2 } = google.auth;
 const dotenv = require("dotenv");
 dotenv.config();
+const OAUTH_PLAYGROUND = "https://developers.google.com/oauthplayground";
 
 const {
   MAILING_SERVICE_CLIENT_ID,
   MAILING_SERVICE_CLIENT_SECRET,
   MAILING_SERVICE_REFRESH_TOKEN,
   SENDER_EMAIL_ADDRESS,
-  OAUTH_PLAYGROUND,
 } = process.env;
 
 const oauth2Client = new google.auth.OAuth2(
@@ -38,7 +38,7 @@ const sendEmail = (to, url, name, txt) => {
       clientId: MAILING_SERVICE_CLIENT_ID,
       clientSecret: MAILING_SERVICE_CLIENT_SECRET,
       refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
-      accessToken: accessToken,
+      accessToken,
     },
   });
 
