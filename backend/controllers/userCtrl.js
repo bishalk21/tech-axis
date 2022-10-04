@@ -173,7 +173,7 @@ const userCtrl = {
         return res.status(400).json({ msg: "That Email doesn't exist." });
 
       const access_token = createAccessToken({ id: existingUser._id });
-      const url = `${CLIENT_URL}user/reset/${access_token}`;
+      const url = `${CLIENT_URL}/user/reset/${access_token}`;
 
       sendMail(email, url, existingUser.name, "Reset your password");
       res.json({
