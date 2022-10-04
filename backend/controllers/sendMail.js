@@ -30,6 +30,7 @@ const sendEmail = (to, url, name, txt) => {
   console.log("send mail 2");
 
   const accessToken = oauth2Client.getAccessToken();
+  // console.log(accessToken);
   const smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
