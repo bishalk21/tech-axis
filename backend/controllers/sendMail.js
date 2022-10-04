@@ -12,7 +12,7 @@ const {
   SENDER_EMAIL_ADDRESS,
 } = process.env;
 
-const oauth2Client = new google.auth.OAuth2(
+const oauth2Client = new OAuth2(
   MAILING_SERVICE_CLIENT_ID,
   MAILING_SERVICE_CLIENT_SECRET,
   MAILING_SERVICE_REFRESH_TOKEN,
@@ -31,6 +31,9 @@ const sendEmail = (to, url, name, txt) => {
 
   const accessToken = oauth2Client.getAccessToken();
   // console.log(accessToken);
+
+  callback(oauth2Client);
+
   const smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {

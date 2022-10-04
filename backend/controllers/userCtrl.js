@@ -1,6 +1,8 @@
 //jwt : store users in browser for some period to stay loged in
 //get email and the password from the frontend
 //whenever have a post request u get all the data through the req.body
+const dotenv = require("dotenv");
+dotenv.config();
 const Users = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");

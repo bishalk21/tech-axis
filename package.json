@@ -24,7 +24,7 @@
   "homepage": "https://github.com/bishalk21/E-learning-platform-Mern#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "cloudinary": "^1.25.1",
+    "cloudinary": "^1.32.0",
     "concurrently": "^6.1.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
